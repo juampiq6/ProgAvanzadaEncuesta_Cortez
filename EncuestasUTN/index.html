@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +7,8 @@
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
         <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <link href="js/lib/Bootstrap/css/bootstrapValidator.min.css" rel="stylesheet" type="text/css"/>        
+        <link href="bootstrap/DataTables/datatables.min.css" rel="stylesheet" type="text/css"/>
         <title>UTN FRM</title>
     </head>
     <body>
@@ -17,16 +18,16 @@
             <div class="col-md-8"> </div>
             <div class="jumbotron">
             <form class="navbar-form navbar" role="search">
-                <a href="http://localhost/Encuesta/ProgAvanzadaEncuesta_Cortez/Admision.html" class="btn btn-primary">Ingreso</a>
-                <a href="http://localhost/Encuesta/ProgAvanzadaEncuesta_Cortez/MitadCarrera.html" class="btn btn-primary">Mitad Carrera</a>
-                <a href="http://localhost/Encuesta/ProgAvanzadaEncuesta_Cortez/Desercion.html" class="btn btn-primary">Desercion</a>
-                <a href="http://localhost/Encuesta/ProgAvanzadaEncuesta_Cortez/Titulacion.html" class="btn btn-primary">Titulacion</a>
-                <a href="http://localhost/Encuesta/ProgAvanzadaEncuesta_Cortez/Laboral.html" class="btn btn-primary">Laboral</a>
-                <a href="http://localhost/Encuesta/ProgAvanzadaEncuesta_Cortez/Progreso.html" class="btn btn-primary">Progreso laboral</a>
+                <a href="http://localhost/Encuestas/Admision.html" class="btn btn-primary">Ingreso</a>
+                <a href="http://localhost/Encuestas/MitadCarrera.html" class="btn btn-primary">Mitad Carrera</a>
+                <a href="http://localhost/Encuestas/Desercion.html" class="btn btn-primary">Desercion</a>
+                <a href="http://localhost/Encuestas/Titulacion.html" class="btn btn-primary">Titulacion</a>
+                <a href="http://localhost/Encuestas/Laboral.html" class="btn btn-primary">Laboral</a>
+                <a href="http://localhost/Encuestas/Progreso.html" class="btn btn-primary">Progreso laboral</a>
                 <h1>Gestion de personas</h1>
                     <h3>Administra los datos de todos los que componen la Universidad</h3>
                 <button type="button" class="btn btn-primary" data-toggle="modal" 
-                        data-target="#agregarPersona">Agregar Persona</button>
+                        data-target="#" id="agregaP">Agregar Persona</button>
                 <table id="tablaPersonas" class="table">
                     <thead>
                         <tr>
@@ -39,14 +40,14 @@
                         </tr>
                     </thead>
 
-                    <tbody id="cuerpoTabla"></tbody>
+                    <tbody id="cuerpopersona"></tbody>
                 </table>
                 <div class="col-md-2"> </div>
 
 
                 <!--_______________________________________________________-->
 
-                <div class="modal fade" id="agregarPersona" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal fade" id="modalPersona" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <form id="formPersona" class="form-horizontal"
@@ -60,7 +61,7 @@
                                 <!-- Header del modal -->
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title" id="tituloModal">titulo</h4>
+                                    <h4 class="modal-title" id="modaltit">titulo</h4>
                                 </div>
                                 <div class="modal-body">
 
@@ -102,7 +103,7 @@
                                             <div class="form-group">
                                                 <label class='col-lg-2'>Tipo:</label>
                                                 <div class='col-lg-10'>
-                                                    <input class="form-control" type="text" id="nombre" name="* Tipo"
+                                                    <input class="form-control" type="text" id="tipo" name="* Tipo"
                                                            data-bv-notempty="true"
                                                            data-bv-notempty-message="Los campos con * son de caracter obligatorio">
                                                     <div class="dropdown">
@@ -136,7 +137,11 @@
 
                 </div>
         </div>
-        </div>
+        
+        <script src="js/lib/Bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/lib/DataTables/datatables.min.js" type="text/javascript"></script>
         <script src="bootstrap/js/jquery-3.2.1.js" type="text/javascript"></script>
+        <script src="usuario/funciones.js" type="text/javascript"></script>
+        </div>
     </body>
 </html>
