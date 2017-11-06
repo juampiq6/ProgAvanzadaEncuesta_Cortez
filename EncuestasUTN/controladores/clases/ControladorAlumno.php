@@ -8,5 +8,11 @@ class ControladorAlumno extends ControladorPrincipal{
         parent::__construct();
     }
     
+    function alta(){}
+    function baja(){}
+    function modificacion(){}
+    function mostrarUltimo(){}
+    function mostrarTodos(){}
+    
     
 }
